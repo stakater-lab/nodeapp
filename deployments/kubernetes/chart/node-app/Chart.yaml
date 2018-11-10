@@ -1,0 +1,11 @@
+apiVersion: v1
+name: node-app
+description: sample node app
+version: 1.0.0
+keywords:
+  - stakater
+  - javascript
+home: https://github.com/stakater/node-app
+maintainers:
+- name: Stakater
+  email: stakater@aurorasolutions.io
