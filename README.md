@@ -1,2 +1,2 @@
-# nodeapp
-A test node app for creating and verifying node application pipeline
+# node-app
+A test repo for a single page node application
