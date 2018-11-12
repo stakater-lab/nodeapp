@@ -1,12 +1,12 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: node-app
+  name: nodeapp
 spec:
   selector:
   # This label is used by Service to connect to pod, 
   # If you change it, so change in deployment's spec labels as well.
-    app: node-app
+    app: nodeapp
   ports:
   - name: web
     port: 8080

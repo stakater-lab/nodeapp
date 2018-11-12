@@ -5,7 +5,7 @@ labels:
 deployment:
   replicas: 1
   podLabels:      
-    app: node-app
+    app: nodeapp
   container:
     name: REPLACE_ME_CONTAINER_NAME
     image: REPLACE_ME_IMAGE_NAME

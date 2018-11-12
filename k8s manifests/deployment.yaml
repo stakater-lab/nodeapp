@@ -1,7 +1,7 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: node-app
+  name: nodeapp
   labels:     
     provider: stakater
     version: "1.0.0"
@@ -12,14 +12,14 @@ spec:
       labels:
       # This label is used by Service to connect to pod, 
       # If you change it, so change Service's labelSelector as well.
-        app: node-app   
+        app: nodeapp   
     spec:
       containers:
-      - name: node-app
+      - name: nodeapp
         image: "REPLACE_ME_APP_IMAGE"
         readinessProbe:
           httpGet:
-            path: /node-app
+            path: /nodeapp
             port: 8080
           initialDelaySeconds: 20
         livenessProbe:
