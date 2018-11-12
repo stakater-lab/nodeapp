@@ -2,21 +2,18 @@ apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
   labels:
-{{ include "REPLACE_ME_APP_NAME.labels.stakater" . | indent 4 }}
-{{ include "REPLACE_ME_APP_NAME.labels.chart" . | indent 4 }}
-  name: {{ template "REPLACE_ME_APP_NAME.name" . }}
+{{ include "nodeapp.labels.stakater" . | indent 4 }}
+{{ include "nodeapp.labels.chart" . | indent 4 }}
+  name: {{ template "nodeapp.name" . }}
 spec:
-  replicas: {{ .Values.deployment.replicas }}
+  replicas: {{ .Values.nodeapp.deployment.replicas }}
   template:
     metadata:
       labels:
-{{ toYaml .Values.deployment.podLabels | indent 8 }}
+{{ toYaml .Values.nodeapp.deployment.podLabels | indent 8 }}
     spec:
       containers:
-      - name: {{ .Values.deployment.container.name }}
-        image: {{ .Values.deployment.container.image | quote }}
-        {{- with .Values.deployment.container.probes }}
-{{ toYaml .Values.deployment.container.probes | indent 8 }}
-        {{- end }}
+      - name: {{ .Values.nodeapp.deployment.containerName }}
+        image: "{{ .Values.nodeapp.deployment.image.name }}:{{ .Values.nodeapp.deployment.image.tag }}"
         ports:
-        - containerPort: 8080
+        - containerPort: 5000

@@ -2,22 +2,22 @@
 {{/*
 Expand the name of the chart.
 */}}
-{{- define "REPLACE_ME_APP_NAME" -}}
+{{- define "nodeapp.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
 
-{{- define "REPLACE_ME_APP_NAME.labels.selector" -}}
-app: {{ template "REPLACE_ME_APP_NAME.name" . }}
-group: {{ .Values.labels.group }}
-provider: {{ .Values.labels.provider }}
+{{- define "nodeapp.labels.selector" -}}
+app: {{ template "nodeapp.name" . }}
+group: {{ .Values.nodeapp.labels.group }}
+provider: {{ .Values.nodeapp.labels.provider }}
 {{- end -}}
 
-{{- define "REPLACE_ME_APP_NAME.labels.stakater" -}}
-{{ template "REPLACE_ME_APP_NAME.labels.selector" . }}
-version: "{{ .Values.labels.version }}"
+{{- define "nodeapp.labels.stakater" -}}
+{{ template "nodeapp.labels.selector" . }}
+version: "{{ .Values.nodeapp.labels.version }}"
 {{- end -}}
 
-{{- define "REPLACE_ME_APP_NAME.labels.chart" -}}
+{{- define "nodeapp.labels.chart" -}}
 chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
 release: {{ .Release.Name | quote }}
 heritage: {{ .Release.Service | quote }}

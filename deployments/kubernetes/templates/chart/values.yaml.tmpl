@@ -1,13 +1,16 @@
+kubernetes:
+  host: https://kubernetes.default
+
 nodeapp:
   labels:
     group: com.stakater.platform
     provider: stakater
-    version: 1.0.0
+    version: {{ getenv "VERSION" }}
   deployment:
     replicas: 1
     podLabels:      
       app: stakater-nodeapp
     containerName: nodeapp
     image:
-      name: stakater/nodeapp
-      tag: 1.0.0
+      name: {{ getenv "DOCKER_IMAGE" }}
+      tag: {{ getenv "DOCKER_TAG" }}
