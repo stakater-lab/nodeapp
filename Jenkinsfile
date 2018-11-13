@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-@Library('github.com/stakater/fabric8-pipeline-library@add-chart-params') _
+@Library('github.com/stakater/fabric8-pipeline-library@v2.9.0') _
 
 releaseNodeApplication {
   appName = "carbook"
