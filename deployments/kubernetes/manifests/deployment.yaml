@@ -1,0 +1,27 @@
+---
+# Source: nodeapp/templates/deployment.yaml
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: nodeapp
+    group: com.stakater.platform
+    provider: stakater
+    version: "0.0.1"
+    chart: "nodeapp-0.0.1"
+    release: "RELEASE-NAME"
+    heritage: "Tiller"
+  name: nodeapp
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: stakater-nodeapp
+        
+    spec:
+      containers:
+      - name: nodeapp
+        image: "docker.tools.stackator.com:443/stakater/nodeapp:v0.0.1"
+        ports:
+        - containerPort: 5000
