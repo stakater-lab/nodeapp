@@ -11,7 +11,7 @@ EXPOSE 8080
 # add `/usr/src/app/node_modules/.bin` to $PATH
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 
-COPY . /
+COPY . /usr/src/app/
 
 # start app
 CMD ["npm", "start"]

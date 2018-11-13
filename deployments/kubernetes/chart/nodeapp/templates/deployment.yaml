@@ -1,0 +1,19 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  labels:
+{{ include "nodeapp.labels.stakater" . | indent 4 }}
+{{ include "nodeapp.labels.chart" . | indent 4 }}
+  name: {{ template "nodeapp.name" . }}
+spec:
+  replicas: {{ .Values.nodeapp.deployment.replicas }}
+  template:
+    metadata:
+      labels:
+{{ toYaml .Values.nodeapp.deployment.podLabels | indent 8 }}
+    spec:
+      containers:
+      - name: {{ .Values.nodeapp.deployment.containerName }}
+        image: "{{ .Values.nodeapp.deployment.image.name }}:{{ .Values.nodeapp.deployment.image.tag }}"
+        ports:
+        - containerPort: 5000
