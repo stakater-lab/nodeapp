@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-@Library('github.com/stakater/fabric8-pipeline-library@v2.9.2') _
+@Library('github.com/stakater/fabric8-pipeline-library@v2.9.3') _
 
 releaseNodeApplication {
   appName = "carbook"
