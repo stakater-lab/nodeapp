@@ -1,10 +1,10 @@
 apiVersion: v1
 name: nodeapp
-description: sample node app
-version: 1.0.0
+description: A sample node
+version: 0.0.1
 keywords:
   - stakater
-  - javascript
+  - node
 home: https://github.com/stakater-lab/nodeapp
 maintainers:
 - name: Stakater

@@ -1,0 +1,24 @@
+---
+# Source: nodeapp/templates/service.yaml
+kind: Service
+apiVersion: v1
+metadata:
+  labels:
+    app: nodeapp
+    group: com.stakater.platform
+    provider: stakater
+    version: "0.0.1"
+    chart: "nodeapp-0.0.1"
+    release: "RELEASE-NAME"
+    heritage: "Tiller"
+    k8sapp: stakater-nodeapp   # label used by service monitor
+  name: nodeapp
+spec:
+  selector:
+    app: stakater-nodeapp
+    
+  ports:
+  - name: web
+    port: 80
+    protocol: TCP
+    targetPort: 5000

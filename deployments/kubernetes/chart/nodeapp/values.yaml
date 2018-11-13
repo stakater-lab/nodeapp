@@ -1,13 +1,16 @@
+kubernetes:
+  host: https://kubernetes.default
+
 nodeapp:
   labels:
     group: com.stakater.platform
     provider: stakater
-    version: 1.0.0
+    version: 0.0.1
   deployment:
     replicas: 1
     podLabels:      
       app: stakater-nodeapp
     containerName: nodeapp
     image:
-      name: stakater/nodeapp
-      tag: 1.0.0
+      name: docker.tools.stackator.com:443/stakater/nodeapp
+      tag: v0.0.1
