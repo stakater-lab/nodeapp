@@ -6,5 +6,5 @@ releaseNodeApplication {
   e2eTestJob = "carbook/e2e-tests-manual/master"
   performanceTestsJob = "carbook/performance-tests-manual/master"
   mockAppsJobName = 'carbook/carbook-mock-apps-manual/master'
-  devAppsJobName = 'carbook/carbook-dev-apps-manual/add-helmRequirementsBuilder'
+  devAppsJobName = 'carbook/carbook-dev-apps-manual/master'
 }
