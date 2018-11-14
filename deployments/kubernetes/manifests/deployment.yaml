@@ -7,8 +7,8 @@ metadata:
     app: nodeapp
     group: com.stakater.platform
     provider: stakater
-    version: "0.0.3"
-    chart: "nodeapp-0.0.3"
+    version: "0.0.4"
+    chart: "nodeapp-0.0.4"
     release: "RELEASE-NAME"
     heritage: "Tiller"
   name: nodeapp
@@ -22,6 +22,6 @@ spec:
     spec:
       containers:
       - name: nodeapp
-        image: "docker.tools.stackator.com:443/stakater/nodeapp:v0.0.3"
+        image: "docker.tools.stackator.com:443/stakater/nodeapp:v0.0.4"
         ports:
         - containerPort: 5000

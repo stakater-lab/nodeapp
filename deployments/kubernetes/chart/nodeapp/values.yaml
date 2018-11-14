@@ -5,7 +5,7 @@ nodeapp:
   labels:
     group: com.stakater.platform
     provider: stakater
-    version: 0.0.3
+    version: 0.0.4
   deployment:
     replicas: 1
     podLabels:      
@@ -13,4 +13,4 @@ nodeapp:
     containerName: nodeapp
     image:
       name: docker.tools.stackator.com:443/stakater/nodeapp
-      tag: v0.0.3
+      tag: v0.0.4
