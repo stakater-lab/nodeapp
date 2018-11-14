@@ -1,7 +1,7 @@
 apiVersion: v1
 name: nodeapp
 description: A sample node
-version: 0.0.6
+version: 0.0.7
 keywords:
   - stakater
   - node
