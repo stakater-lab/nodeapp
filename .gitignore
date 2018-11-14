@@ -1,6 +1,2 @@
 node_modules
-# Used by pipeline
-.VERSION
-CHARTMUSEUM_*
-commandResult
 *.tgz
